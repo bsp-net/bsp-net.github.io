@@ -1,9 +1,367 @@
 <html>
-	<head>
-	<meta http-equiv="Refresh" content="0; url=https://github.com/czq142857/BSP-NET-original" />
-		<title>Redirecting</title>
-	</head>
-	<body bgcolor="#F0F0F0">
-		Redirecting to <a href="https://github.com/czq142857/BSP-NET-original">https://github.com/czq142857/BSP-NET-original</a>
-	</body>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>BSP-Net</title>
+	<link rel="shortcut icon" href="image/myico.png" />
+</head>
+
+<style>
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.NetImgWrapper {
+  position: relative;
+  padding-bottom: 30.566%;
+  height: 0;
+}
+.NetImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.convexWrapper {
+  position: relative;
+  padding-bottom: 21.4583%;
+  height: 0;
+}
+.convexWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.SegImgWrapper {
+  position: relative;
+  padding-bottom: 60.1538%;
+  height: 0;
+}
+.SegImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.HorizonImgWrapper {
+  position: relative;
+  padding-bottom: 33.1111%;
+  height: 0;
+}
+.HorizonImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.SvrImgWrapper {
+  position: relative;
+  padding-bottom: 42.8486%;
+  height: 0;
+}
+.SvrImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.CvxImgWrapper {
+  position: relative;
+  padding-bottom: 38.5833%;
+  height: 0;
+}
+.CvxImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+<body>
+<div style="align:center; font-family:Arial; position:absolute; left:10%; right:10%">
+
+<div style="text-align:center; font-size:36;">
+<br><br>
+BSP-Net: Generating Compact Meshes via Binary Space Partitioning
+<br><br>
+</div>
+
+<div align="center">
+<table style="text-align:center;">
+<tr align="center" style="font-size:24;">
+	<td align="center" >
+		<a href="https://czq142857.github.io/" style="text-decoration: none">Zhiqin Chen</a>
+	</td>
+	<td align="center" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+	<td align="center" >
+		<a href="https://gfx.uvic.ca/people/ataiya/" style="text-decoration: none">Andrea Tagliasacchi</a>
+	</td>
+	<td align="center" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+	<td align="center" >
+		<a href="http://www.cs.sfu.ca/~haoz/" style="text-decoration: none">Hao Zhang</a>
+	</td>
+</tr>
+<tr align="center" style="font-size:20;">
+	<td align="center" >
+		<a href="https://www.sfu.ca/" style="text-decoration: none">Simon Fraser University</a>
+	</td>
+	<td align="center" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+	<td align="center" >
+		<a href="https://research.google/" style="text-decoration: none">Google Research</a>
+	</td>
+	<td align="center" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+	<td align="center" >
+		<a href="https://www.sfu.ca/" style="text-decoration: none">Simon Fraser University</a>
+	</td>
+</tr>
+</table>
+<br><br>
+</div>
+
+<div style="text-align:center; font-size:24; position:relative; top:20px">
+<a href="https://youtu.be/9-ixexpjN-8" style="text-decoration: none">CVPR 2020 oral</a> &nbsp;&nbsp; - &nbsp;&nbsp; <a href="https://arxiv.org/abs/1911.06971" style="text-decoration: none">Paper</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="https://youtu.be/9-ixexpjN-8" style="text-decoration: none">Oral video</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="image/bsp-net-poster.pdf" style="text-decoration: none">Poster</a>
+<br><br>
+
+<a href="https://github.com/czq142857/BSP-NET-original" style="text-decoration: none">Code</a> &nbsp;&nbsp; - &nbsp;&nbsp; <a href="https://github.com/czq142857/BSP-NET-original" style="text-decoration: none">Tensorflow 1</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="https://github.com/czq142857/BSP-NET-tf2" style="text-decoration: none">Tensorflow 2</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="https://github.com/czq142857/BSP-NET-pytorch" style="text-decoration: none">PyTorch</a>
+<br><br>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<img src="image/preview.gif"  style="height: 512px; width: 512px;"  align="center"  />
+<br><br><br>
+We present BSP-Net, a network that generates compact meshes via binary space partitioning.
+<br>
+Our generated meshes are low-poly and guaranteed to be watertight.
+<br>
+The edges can reproduce sharp details, yet can still approximate curved boundaries.
+<br>
+</div>
+
+
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Video -
+<br><br><br>
+</div>
+
+<div class="videoWrapper">
+<iframe src="https://www.youtube.com/embed/9-ixexpjN-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Compactness -
+<br><br><br>
+</div>
+
+<div class="NetImgWrapper">
+<img src="image/teaser.png"/>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<br>
+Our BSP-Net generates compact, i.e., low-poly meshes.
+<br>
+The outputs can reproduce sharp edges and approximate smooth geometry.
+<br>
+Implicit models such as <a href="https://github.com/czq142857/IM-NET" style="text-decoration: none">IM-NET</a> need to be iso-surfaced,
+<br>
+resulting in over-tessellated meshes which only approximate sharp details with smooth surfaces.
+<br>
+</div>
+
+
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Method -
+<br><br><br>
+</div>
+
+<div class="NetImgWrapper">
+<img src="image/network.png"/>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<br>
+Our key idea is derived from binary space partitioning trees.
+<br>
+As shown on the left, given a set of oriented planes, and the connections to group them,
+<br>
+we can compute the intersection within each group to obtain convex shapes, and then take their union to construct the final output.
+<br>
+The entire process is based on CSG operations, hence, the output shape is a polygonal mesh.
+<br>
+We designed the network in such way that each component represents a part of the BSP-tree.
+<br>
+Please check the <a href="https://youtu.be/9-ixexpjN-8" style="text-decoration: none">oral video</a> or the <a href="https://arxiv.org/abs/1911.06971" style="text-decoration: none">paper</a> for details.
+<br>
+</div>
+
+
+
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Results -
+<br><br>
+</div>
+
+<div style="text-align:center; font-size:32;">
+2D reconstruction & decomposition
+<br><br><br>
+</div>
+
+<div class="NetImgWrapper">
+<img src="image/2d.png"/>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<br>
+In our toy 2D experiment,
+<br>
+the task of the network is to reconstruct each image as a combination of convex parts.
+<br>
+Since all shapes share the same set of convexes and tree connections,
+<br>
+we find shape segmentations and correspondences in the convex level.
+<br>
+Below, we show a few convexes from the first shape, and the planes to construct them.
+<br><br>
+</div>
+
+<div class="convexWrapper">
+<img src="image/2Dconvex.png"/>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<br>
+A visualization of the training process can be found in our <a href="https://youtu.be/9-ixexpjN-8" style="text-decoration: none">oral video</a>.
+<br>
+A snapshot is shown below.
+<br><br>
+</div>
+
+<div align="center">
+<img src="image/tree.png" />
+</div>
+
+
+<div style="text-align:center; font-size:32;">
+<br><br>
+3D reconstruction & decomposition
+<br><br><br>
+</div>
+
+<div class="SegImgWrapper">
+<img src="image/seg.png"/>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<br>
+We compare our method with several other methods that perform shape decomposition via reconstruction,
+<br>
+including <a href="https://arxiv.org/abs/1612.00404" style="text-decoration: none">Volumetric Primitives</a>, <a href="https://arxiv.org/abs/1904.09970" style="text-decoration: none">SuperQuadrics</a>, and <a href="https://arxiv.org/abs/1903.11228" style="text-decoration: none">BAE-NET</a>,
+<br>
+Our method not only achieves better reconstruction quality, but also has better segmentation results.
+<br>
+Similar to the 2D case, we can find natural correspondences between convexes.
+<br>
+Below, we manually group convexes into semantic parts and visualize correspondences using different colors.
+<br><br>
+</div>
+
+<div class="HorizonImgWrapper">
+<img src="image/horizon.png"/>
+</div>
+
+<div style="text-align:center; font-size:32;">
+<br><br>
+Single View Reconstruction
+<br><br><br>
+</div>
+
+<div class="SvrImgWrapper">
+<img src="image/svr.png"/>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<br>
+Since our BSP-Net is a differentiable 3D decoder,
+<br>
+we can easily pair it with an image encoder to achieve single view reconstruction.
+<br>
+We compare with several state-of-the-art methods,
+<br>
+including <a href="https://arxiv.org/abs/1802.05384" style="text-decoration: none">AtlasNet</a>, <a href="https://arxiv.org/abs/1812.03828" style="text-decoration: none">Occupancy networks</a>, and <a href="https://arxiv.org/abs/1812.02822" style="text-decoration: none">IM-NET</a>,
+<br>
+to show the representation ability of our network and the compactness of the outputs.
+<br>
+Please pay attention to the close-ups of mesh tessellations.
+<br>
+</div>
+
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Related work - <a href="https://cvxnet.github.io/" style="text-decoration: none">CvxNet</a> -
+<br><br>
+</div>
+
+<div class="CvxImgWrapper">
+<img src="image/cvx.png"/>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+<br>
+There is a recent work, <a href="https://cvxnet.github.io/" style="text-decoration: none">CvxNet</a>, that also performs convex decomposition.
+<br>
+Our method differs from theirs, as we target low-poly reconstruction,
+<br>
+and our network has a dymanic number of convexes for different shapes.
+<br><br>
+</div>
+
+
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Citing this work -
+<br><br>
+</div>
+
+<div style="text-align:center; font-size:24; line-height:200%;">
+If you find this work useful in your research, please consider citing:
+<br><br>
+</div>
+
+<div style="text-align:left; font-size:16; line-height:100%; background-color:#F0F0F0; padding-left:20%">
+<br>
+<pre><code>@article{chen2020bspnet,
+  title={BSP-Net: Generating Compact Meshes via Binary Space Partitioning},
+  author={Zhiqin Chen and Andrea Tagliasacchi and Hao Zhang},
+  journal={Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2020}
+}</code></pre>
+<br>
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+</div>
+</body>
 </html>
